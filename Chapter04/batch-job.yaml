@@ -11,6 +11,5 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: main
-        image: luksa/batch-job
-
+        image: 192.168.56.138:5000/joelkhan/batch-job:v1
 

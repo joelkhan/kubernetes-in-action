@@ -6,5 +6,5 @@ spec:
   nodeSelector:
     gpu: "true"
   containers:
-  - image: luksa/kubia
+  - image: 192.168.56.138:5000/joelkhan/kubia-jsweb:v1
     name: kubia

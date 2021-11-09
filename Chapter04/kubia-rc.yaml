@@ -1,11 +1,9 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: kubia
+  name: kubia-rc
 spec:
   replicas: 3
-  selector:
-    app: kubia
   template:
     metadata:
       labels:
@@ -13,6 +11,6 @@ spec:
     spec:
       containers:
       - name: kubia
-        image: luksa/kubia
+        image: 192.168.56.138:5000/joelkhan/kubia-jsweb:v1
         ports:
         - containerPort: 8080

@@ -4,7 +4,7 @@ metadata:
   name: kubia-liveness
 spec:
   containers:
-  - image: luksa/kubia-unhealthy
+  - image: 192.168.56.138:5000/joelkhan/kubia-jsweb-unhealthy:v1
     name: kubia
     livenessProbe:
       httpGet:
