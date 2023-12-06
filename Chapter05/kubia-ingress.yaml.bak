@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: kubia-svcch05-ingress
@@ -8,7 +8,10 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: kubia-svc-ch05-nodeport
-          servicePort: 40080
+          service: 
+            name: kubia-svc-ch05-nodeport
+            port: 
+              number: 40080
 
