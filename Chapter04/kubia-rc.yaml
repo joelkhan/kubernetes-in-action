@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: kubia-rc
+  name: kubia-rc-ch04
 spec:
   replicas: 3
+  selector: 
+    app: kubia
   template:
     metadata:
       labels:
@@ -11,6 +13,6 @@ spec:
     spec:
       containers:
       - name: kubia
-        image: 192.168.56.138:5000/joelkhan/kubia-jsweb:v1
+        image: k8fri.cluster.local/library/kubia:ch02
         ports:
         - containerPort: 8080

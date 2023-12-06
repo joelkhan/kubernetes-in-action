@@ -11,5 +11,4 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: main
-        image: 192.168.56.138:5000/joelkhan/batch-job:v1
-
+        image: k8fri.cluster.local/library/batch-job:v1

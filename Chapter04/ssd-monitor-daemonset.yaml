@@ -15,5 +15,5 @@ spec:
         disk: ssd
       containers:
       - name: main
-        image: 192.168.56.138:5000/joelkhan/ssd-montr:v1
+        image: k8fri.cluster.local/library/ssd_is_running:latest
 
