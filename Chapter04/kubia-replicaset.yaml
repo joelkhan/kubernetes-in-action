@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v1     # 格式：API组/实际版本
 kind: ReplicaSet
 metadata:
   name: kubia-rs
@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: kubia
-        image: 192.168.56.138:5000/joelkhan/kubia-jsweb:v1
+        image: k8fri.cluster.local/library/kubia:ch02
