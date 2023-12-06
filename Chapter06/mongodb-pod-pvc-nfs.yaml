@@ -1,20 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mongodb-nfs
+  name: mongodb-pvc-nfs
 spec:
-  volumes:
-  - name: mongodb-data
-    nfs:
-      server: 192.168.3.196
-      path: /opt/nfs
   containers:
   - image: mongo
-    name: mongodb
+    name: mongodb-pvc-nfs
     volumeMounts:
     - name: mongodb-data
       mountPath: /data/db
     ports:
     - containerPort: 27017
       protocol: TCP
+  volumes:
+  - name: mongodb-data
+    persistentVolumeClaim:
+      claimName: mongodb-pvc-nfs
 

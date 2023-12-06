@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: fortune
+  name: fortune-pod
 spec:
   containers:
-  - image: luksa/fortune
+  - image: k8fri.cluster.local/library/fortune:v1
     name: html-generator
     volumeMounts:
     - name: html
@@ -21,4 +21,3 @@ spec:
   volumes:
   - name: html
     emptyDir: {}
-
