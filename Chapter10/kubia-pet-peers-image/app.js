@@ -41,7 +41,7 @@ var handler = function(request, response) {
     response.writeHead(200);
     if (request.url == '/data') {  // 请求路径是/data，则读取当前pod中的数据
       var data = fileExists(dataFile) ? fs.readFileSync(dataFile, 'utf8') : "No data posted yet";
-      response.end(data);
+      response.end(data + "\n");
     } else {                         // 请求路径不是/data， 则读取整个“存储集群”中所有pod的数据
       response.write("You've hit " + os.hostname() + "\n");
       response.write("Data stored in the cluster:\n");
